@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RTask.MainPage">
+
+    <StackLayout>
+        <StackLayout>
+            <!-- Lista de tareas -->
+            <ScrollView>
+                <StackLayout x:Name="tasksStackLayout">
+                    <!-- Las tareas se añadirán aquí dinámicamente -->
+                </StackLayout>
+            </ScrollView>
+
+            <!-- Botón para agregar tarea -->
+            <Button Text="+"
+                Clicked="AddTask_Clicked"
+                HorizontalOptions="End"
+                VerticalOptions="End"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

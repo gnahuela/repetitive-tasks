@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="AppName">MyApp</string>
+  <string name="Task">Task</string>
+  <string name="EnterTaskText">Enter the task text</string>
+</resources>

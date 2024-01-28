@@ -3,16 +3,108 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RTask.MainPage">
 
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Top Bar -->
+            <StackLayout BackgroundColor="LightBlue" HeightRequest="50">
+                <!-- You can customize the top bar content as needed -->
+                <Label Text="RTask" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <!-- Main Content -->
+            <StackLayout>
+                <!-- Section 1 -->
+                <Label Text="Section 1" FontSize="Large" FontAttributes="Bold"/>
+                <ListView ItemsSource="{Binding TasksSection1}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox IsChecked="{Binding Completed}" />
+                                    <Label Text="{Binding Description}" />
+                                    <Button Text="Complete" Clicked="OnCompleteClicked" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <!-- Repeat the same pattern for other sections -->
+
+                <!-- Section 2 -->
+                <Label Text="Section 2" FontSize="Large" FontAttributes="Bold"/>
+                <ListView ItemsSource="{Binding TasksSection2}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox IsChecked="{Binding Completed}" />
+                                    <Label Text="{Binding Description}" />
+                                    <Button Text="Complete" Clicked="OnCompleteClicked" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <!-- Section 3 -->
+                <Label Text="Section 3" FontSize="Large" FontAttributes="Bold"/>
+                <ListView ItemsSource="{Binding TasksSection3}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox IsChecked="{Binding Completed}" />
+                                    <Label Text="{Binding Description}" />
+                                    <Button Text="Complete" Clicked="OnCompleteClicked" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <!-- Section 4 -->
+                <Label Text="Section 4" FontSize="Large" FontAttributes="Bold"/>
+                <ListView ItemsSource="{Binding TasksSection4}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox IsChecked="{Binding Completed}" />
+                                    <Label Text="{Binding Description}" />
+                                    <Button Text="Complete" Clicked="OnCompleteClicked" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+            <!-- Bottom Bar -->
+            <StackLayout BackgroundColor="LightBlue" HeightRequest="50">
+                <!-- You can customize the bottom bar content as needed -->
+                <Button Text="Add Task" Clicked="OnAddTaskClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
+<!--<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RTask.MainPage">
+
     <StackLayout>
         <StackLayout>
-            <!-- Lista de tareas -->
+            --><!-- Lista de tareas --><!--
             <ScrollView>
                 <StackLayout x:Name="tasksStackLayout">
-                    <!-- Las tareas se añadirán aquí dinámicamente -->
+                    --><!-- Las tareas se añadirán aquí dinámicamente --><!--
                 </StackLayout>
             </ScrollView>
 
-            <!-- Botón para agregar tarea -->
+            --><!-- Botón para agregar tarea --><!--
             <Button Text="+"
                 Clicked="AddTask_Clicked"
                 HorizontalOptions="End"
@@ -20,4 +112,4 @@
         </StackLayout>
     </StackLayout>
 
-</ContentPage>
+</ContentPage>-->
